@@ -1,0 +1,9 @@
+#알파벳 대조문제였는데 무난한게 쉬웠다
+a=1
+Input=input()
+croatia=['c=','c-','dz=','d-','lj','nj','s=','z=']
+for i in croatia:
+    Input=Input.replace(i,'c')
+
+
+print(len(Input))

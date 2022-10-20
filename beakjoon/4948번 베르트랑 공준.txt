@@ -1,0 +1,22 @@
+#에라토르체를 통해 풀이
+#시간이 많이부족하였다
+#제한시간 1초
+def sosu(n):
+    a = [False,False] + [True]*(n-1)
+    primes=[]
+
+    for i in range(2,n+1):
+      if a[i]:
+        primes.append(i)
+        for j in range(2*i, n+1, i):
+            a[j] = False
+    return primes
+
+while True:
+    n = int(input())
+    min = len(sosu(n))
+    max = len(sosu(2*n))
+    if n == 0:
+        break
+    else:
+        print(max - min)

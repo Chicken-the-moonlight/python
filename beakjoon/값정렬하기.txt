@@ -1,0 +1,13 @@
+# 나이값  정렬하기
+import sys
+import  operator #사용할려 했으나 사용않함
+A=int(sys.stdin.readline())
+b=[]
+for i in range(A):
+    a,name=sys.stdin.readline().split()
+    C=(int(a),name)
+    b.append(C)
+
+b.sort(key=lambda x:x[0]) # 0기준으로 정렬하기
+for i in b:
+    print(i[0],i[1])

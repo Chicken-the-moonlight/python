@@ -1,0 +1,27 @@
+#무난한 소수찾기 문제였다
+#에라토스체
+def Jacsu(A): #8 소수 찾기
+   incount=0
+   for i in range(2,int(A**0.5)+1):
+       if(A%i==0):
+           incount=incount+1
+           break
+
+   return incount
+
+
+su=int(input()) #수 갯 수 입력
+for i in range(su):
+    A=int(input())
+    suma=A//2
+
+    sumb=A//2
+    while True :
+        if(Jacsu(suma)==0):
+            if(Jacsu(sumb)==0):
+
+                print(int(suma),int(sumb))
+                break
+
+        suma=suma-1
+        sumb=sumb+1

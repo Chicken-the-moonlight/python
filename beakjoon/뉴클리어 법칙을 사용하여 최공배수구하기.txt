@@ -1,0 +1,13 @@
+a,b=map(int,input().split())
+c=0
+d,r=a,b
+while True:
+    if a%b==0:
+        c=b
+        break
+    else:
+        c = a % b
+        a = b
+        b = c
+print(c)
+print(d*r//c)

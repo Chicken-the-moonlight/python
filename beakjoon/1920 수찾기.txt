@@ -1,0 +1,19 @@
+# 1920번 수찾기
+
+#input을 쓰면 너무느리므로 readline 을사용하자
+
+# 시간초과가 많이나서 굉장히 고민을 많이했다
+# 딕셔너리값으로 키값의 1을넣고 대조해서 찾는방식을 사용
+import sys
+A=sys.stdin.readline()
+dic={}
+for i in sys.stdin.readline().split():
+    dic[i]=1
+m=sys.stdin.readline()
+M=sys.stdin.readline().split()
+
+for j in M:
+    if dic.get(j):
+        print('1')
+    else:
+        print('0')

@@ -1,0 +1,13 @@
+#백준 1010 다리놓기
+# 함수 팩토리얼을 만들어 계산하였다
+def factorial(n):
+    if n==1 or n==0:
+        return 1
+    else:
+        return n*factorial(n-1)
+A=int(input())
+for i in range(A):
+    B=input().split()
+    D=int(B[1])-int(B[0])
+    C=int(factorial(int(B[1]))/(factorial(D)*factorial(int(B[0]))))
+    print(C)

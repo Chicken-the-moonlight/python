@@ -1,0 +1,11 @@
+#단어나누기
+A=input()
+list_A=[]
+
+for i in range(len(A)):
+    for j in range(i+1,len(A)-1):
+        word=[A[:i+1],A[i+1:j+1],A[j+1:]]
+        word=[word[0][::-1],word[1][::-1],word[2][::-1]]
+        list_A.append("".join(word))
+list_A.sort()
+print(list_A[0])
